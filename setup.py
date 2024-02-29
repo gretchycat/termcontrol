@@ -4,10 +4,10 @@ import shutil
 
 with open('README.md') as f:
     long_description = f.read()
-shutil.copyfile('termcontrol/termcontrol.py', '__init__.py')
+shutil.copyfile('gm_termcontrol/termcontrol.py', 'gm_termcontrol/__init__.py')
 
 setup(
-    name='termcontrol',
+    name='gm_termcontrol',
     version='0.0.1',
     license='GPL3',
     url='https://github.com/gretchycat/termcontrol',

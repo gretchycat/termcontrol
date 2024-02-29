@@ -1,5 +1,5 @@
 [build-system]
-include = ["termcontrol"]
+include = ["gm_termcontrol"]
 requires = [
     "pyte",
     "setuptools>=42",
