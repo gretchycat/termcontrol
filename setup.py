@@ -4,7 +4,7 @@ import shutil
 
 with open('README.md') as f:
     long_description = f.read()
-shutil.copyfile('termcontrol/termplayer.py', '__init__.py')
+shutil.copyfile('termcontrol/termcontrol.py', '__init__.py')
 
 setup(
     name='termcontrol',
@@ -22,5 +22,5 @@ setup(
     ],
     tests_require=[
     ],
-    scripts=['termcontrol/termcontrol']
+    #scripts=['termcontrol/termcontrol']
 )
