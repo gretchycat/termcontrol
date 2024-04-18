@@ -640,11 +640,12 @@ class widget():
             cw.checkWidgetEvents(key, cw)
 
     def guiLoop(self):
-        go=True
+        self.go=True
         print(self.t.disable_cursor(), end='')
         print(self.t.enable_mouse(), end='')
+        print(self.t.alt_screen(), end='')
         buffercache=""
-        while go:
+        while self.go:
             buffer=self.draw()
             if buffer != buffercache:
                 buffercache=buffer
@@ -653,6 +654,7 @@ class widget():
             self.checkWidgetEvents(key, self)
         print(self.t.enable_cursor(), end='')
         print(self.t.disable_mouse(), end='')
+        print(self.t.normal_screen(), end='')
 
     def quit(self):
         exit(0)
