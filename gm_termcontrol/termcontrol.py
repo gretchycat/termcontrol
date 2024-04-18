@@ -629,7 +629,7 @@ class widget():
     def checkWidgetEvents(self, key, w):
         if key!='':
             esc='\x1b'
-            print(f'{self.t.gotoxy(10,19)}  {key.replace(esc, "<")}         ')
+            #print(f'{self.t.gotoxy(10,19)}  {key.replace(esc, "<")}         ')
         if w.key==key:
             if f'{type(self.action)}' in [ "function", "<class 'method'>" ]:
                 self.invert=True
@@ -641,19 +641,18 @@ class widget():
 
     def guiLoop(self):
         go=True
-        self.t.disable_cursor()
-        self.t.enable_mouse()
+        print(self.t.disable_cursor(), end='')
+        print(self.t.enable_mouse(), end='')
         buffercache=""
         while go:
             buffer=self.draw()
             if buffer != buffercache:
                 buffercache=buffer
                 print(buffer, end='')
-            #print("\n"*3)
             key=self.kb.read_keyboard_input()
             self.checkWidgetEvents(key, self)
-        self.t.enable_cursor()
-        self.t.disable_mouse()
+        print(self.t.enable_cursor(), end='')
+        print(self.t.disable_mouse(), end='')
 
     def quit(self):
         exit(0)
