@@ -8,7 +8,7 @@ shutil.copyfile('gm_termcontrol/termcontrol.py', 'gm_termcontrol/__init__.py')
 
 setup(
     name='gm_termcontrol',
-    version='0.0.1',
+    version='0.0.3',
     license='GPL3',
     url='https://github.com/gretchycat/termcontrol',
     author='Gretchen Maculo',
